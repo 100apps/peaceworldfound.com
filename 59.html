@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>等待跳转...</title>
+<link href="/style/info/list.css" rel="stylesheet" type="text/css" />
+<link href="/style/login/login.css" rel="stylesheet" type="text/css" />
+<script>if(window.top != window){window.top.="/login/login.action";}</script>
+<script language="javascript" src="http://www.ucdrs.superlib.net/javascript/common.js"></script>
+<script language="javascript" type="text/javascript" src="http://www.ucdrs.superlib.net/javascript/runtime/jquery/jquery-1.2.1.js"></script>
+<script language="javascript" type="text/javascript" src="http://www.ucdrs.superlib.net/user/js/login.js"></script>
+<!-- SCRIPT language=javascript src="http://www.ucdrs.superlib.net/js/getcookie.action"></SCRIPT -->
+</head>
+<body>
+<script>
+function sm(){
+	var m =  document.getElementById('msg');
+	var s =  document.getElementById('submit');
+	m.innerHTML = "&#1444;......";
+	s.disabled = true;
+}
+</script>
+
+
+<div id="Layer1"><br /></div>
+<div id="content">
+<form id="login" onsubmit="return checkForm();" action="http://www.ucdrs.superlib.net/login/login.action" method="post">
+<input name="backurl" type="hidden" value=""/>
+<input name="areaid" type="hidden" value="431"/>
+  <table align="center">
+    <tr height="80"></tr>
+    <tr><td colspan="3" style="padding-bottom:15px;"><font style="margin-left:60px;font-size:15px;" color="red" id="msg"></font></td></tr>    
+    <tr>
+      <td align="right"><div align="right"></div></td>
+      <td>&nbsp;</td>
+      <td width="350"><input name="userName" id="userName"  type="hidden" size="27" value="a02637990" class="w190" /><span id="sname"></span></td>
+    </tr>
+    <tr height="10"> </tr>
+    <tr>
+      <td align="right"><div align="right"> </div></td>
+      <td>&nbsp;</td>
+      <td><input name="passWord" id="passWord" type="hidden" size="27" value="568582" class="w190"/><span id="spswd"></span></td>
+    </tr>
+    <tr height="10"> </tr>
+    <tr>
+      <td align="right"><div align="right">登陆机构</div></td>
+      <td>&nbsp;&nbsp;</td>
+      <td><select name="gid" id="gid">
+    <option value="7320">酷米图书馆</option>
+
+
+</select>
+<span id="schoolinfo"></span></td>
+    <script  type="text/javascript" language="javascript">
+       //  &#65533;&#65533;&#1467;&#1211;&#65533;&#65533;&#300;&#1121;&#65533;&#65533;
+           var $_options=$("select[name='gid'] option");
+           if($_options.length==2){
+               $_options.eq(1).attr("selected","selected");
+           }
+    </script>
+    
+    </tr>
+    <tr height="10"> </tr>
+    <tr>
+      <td align="right"><div align="right">&#1444; </div></td>
+      <td>&nbsp;&nbsp;</td>
+      <td class="trleft"><input name="verifyCode" id="verifyCode" type="text" size="6" value=""/><span>&nbsp;&nbsp;<img id="vimg" src="http://www.ucdrs.superlib.net/user/vImage.jsp" />&nbsp;&nbsp;<a href="#" style="padding-botomm:5px;" onclick="document.getElementById('vimg').src='http://www.ucdrs.superlib.net/user/vImage.jsp?t='+ (new Date().getTime());">刷新验证码</a>&nbsp;&nbsp;</span><span id="vcoder" style="margin-top:7px;"></span></td>
+    </tr>
+    <tr height="15"> </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td><div>
+          <input type="submit" value=" 登陆" id="submit" />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
+    </tr>
+  </table>
+</form>
+</div>
+<script type="text/javascript">
+function change(id) {
+document.getElementById(id).src = "http://www.duxiu.com/vImage.jsp?t="+(new Date().getTime())
+}
+change(vimg);
+</script>
+
+</body>
+</html>
